@@ -34,7 +34,6 @@ bindkey '^R' history-incremental-search-backward
 
 # End of lines added by compinstall
 neofetch
-source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # sourcing .zprofile because it doesn't for some reason
 source $HOME/.zprofile
@@ -53,3 +52,40 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 alias dragon="dragon-drag-and-drop"
+alias psqli="./psqli" 
+alias r="radian"
+alias rstudio="sudo rstudio-bin"
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+# Set up Node Version Manager
+ source /usr/share/nvm/init-nvm.sh
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/mohamed/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/mohamed/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/mohamed/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/mohamed/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
+# Bun
+export BUN_INSTALL="/home/mohamed/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+alias bun='sde -chip-check-disable -- bun'
+alias bun='sde -chip-check-disable -- bun'
+alias sudo='doas'
+export PATH="$PATH:/usr/flutter/bin:~/.local/bin" 
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="$HOME/.local/share/JetBrains/Tooolbox/scripts:$PATH"
+export JAVA_HOME="/usr/lib/jvm/java-11-openjdk/"
+export PATH="$JAVA_HOME/bin:/opt/android_sdk/cmdline-tools/latest/bin:$PATH"
+export ANDROID_HOME="$HOME/android_sdk"
+export ANDROID_SDK_ROOT=$ANDROID_HOME
